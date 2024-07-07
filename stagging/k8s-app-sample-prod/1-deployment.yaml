@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-prod
   namespace: prod
   labels: 
-    app: nginx
+    app: nginx-prod
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-prod
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-prod
     spec:
       containers:
-        - name: nginx
+        - name: nginx-prod
           image: narason/nginx:1.0
           resources:
             limits:

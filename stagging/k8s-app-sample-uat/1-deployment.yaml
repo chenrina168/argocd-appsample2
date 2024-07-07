@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: nginx-uat
   namespace: uat
   labels: 
-    app: nginx
+    app: nginx-uat
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: nginx-uat
   template:
     metadata:
       labels:
-        app: nginx
+        app: nginx-uat
     spec:
       containers:
-        - name: nginx
+        - name: nginx-uat
           image: narason/nginx:1.0
           resources:
             limits:

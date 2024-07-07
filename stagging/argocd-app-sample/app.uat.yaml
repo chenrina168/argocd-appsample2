@@ -2,16 +2,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: my-app
+  name: my-app-uat
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   project: default
   source:
-    repoURL: https://github.com/chenrina168/argocd-app-sample.git
+    repoURL: https://github.com/chenrina168/argocd-appsample2.git
     targetRevision: HEAD
-    path: /stagging/k8s-app-sample-uat
+    path: ./stagging/k8s-app-sample-uat
   destination:
     server: https://kubernetes.default.svc
   syncPolicy:
