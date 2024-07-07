@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: nginx-uat
-          image: narason/nginx:1.0
+          image: narason/nginx:1.1
           resources:
             limits:
               memory: "128Mi"
